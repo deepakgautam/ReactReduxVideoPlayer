@@ -13,7 +13,7 @@ const youtubeApiSearchKey = 'AIzaSyAtEptxVFOx2QSoS2Ov-lbakSgGJflp9Bs';
      payLoad contains additional details which can be used in the reducer
  */   
 export function selectVideo(videoSelected) {
-    return {
+    return  {
         type : 'SELECT_VIDEO',
         payload : {video : videoSelected}
       };
