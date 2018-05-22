@@ -1,7 +1,7 @@
 import axios from 'axios'
 import YTSearch from 'youtube-api-search';
 /* my private youtube api  before deployement need to change */
-const youtubeApiSearchKey = 'AIzaSyAtEptxVFOx2QSoS2Ov-lbakSgGJflp9Bs';
+const youtubeApiSearchKey = ['place your own youtube api key'];
 /*
    this  file contains all the Actioncreaters with different function names 
    
@@ -25,7 +25,7 @@ export function selectVideo(videoSelected) {
      payLoad contains additional details which can be used in the reducer
  */ 
 export function searchVideo(term) {
-      let request = axios.get("https://www.googleapis.com/youtube/v3/search?q="+term+"&part=snippet&key=AIzaSyAtEptxVFOx2QSoS2Ov-lbakSgGJflp9Bs");
+      let request = axios.get("https://www.googleapis.com/youtube/v3/search?q="+term+"&part=snippet&key="+youtubeApiSearchKey/"");
       return {
             type : 'VIDEO_SEARCHED',
             payload : request
@@ -33,7 +33,7 @@ export function searchVideo(term) {
 }
   
 export function searchTrendingVideo(term) {
-    let request = axios.get("https://www.googleapis.com/youtube/v3/search?q="+term+"&part=snippet&key=AIzaSyAtEptxVFOx2QSoS2Ov-lbakSgGJflp9Bs");
+    let request = axios.get("https://www.googleapis.com/youtube/v3/search?q="+term+"&part=snippet&key="+youtubeApiSearchKey/"");
     return {
           type : 'TRENDING_VIDEO_SEARCH',
           payload : request
