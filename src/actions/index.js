@@ -2,7 +2,7 @@ import axios from 'axios'
 import YTSearch from 'youtube-api-search';
 //please use your own youtube api key 
 //for generating your api key refer this link  -> https://developers.google.com/youtube/android/player/register
-const youtubeApiSearchKey = 'AIzaSyAtEptxVFOx2QSoS2Ov-lbakSgGJflp9Bs'// plese user your own key;
+const youtubeApiSearchKey = ''// plese user your own key;
 
  /* 
      selectVideo is an ActionCreator, it needs to return an action,
