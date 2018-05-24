@@ -18,12 +18,7 @@ const VideoListItem = ({video,selectVideoChange}) =>  {
         </li>
         )    
 }
-
-// Anything returned from this function will end up as props
-// on the VideoListItem container
 function mapDispatchToProps(dispatch) {
-  // Whenever VideoListItem is called, the result shoudl be passed
-  // to all of our reducers
   return bindActionCreators({ selectVideoChange : selectVideo }, dispatch);
 }
 export default connect(null,mapDispatchToProps)(VideoListItem);  

@@ -1,11 +1,8 @@
 import axios from 'axios'
 import YTSearch from 'youtube-api-search';
-/* my private youtube api  before deployement need to change */
-const youtubeApiSearchKey = ['place your own youtube api key'];
-/*
-   this  file contains all the Actioncreaters with different function names 
-   
-*/
+//please use your own youtube api key 
+//for generating your api key refer this link  -> https://developers.google.com/youtube/android/player/register
+const youtubeApiSearchKey = 'AIzaSyAtEptxVFOx2QSoS2Ov-lbakSgGJflp9Bs'// plese user your own key;
 
  /* 
      selectVideo is an ActionCreator, it needs to return an action,
@@ -25,7 +22,7 @@ export function selectVideo(videoSelected) {
      payLoad contains additional details which can be used in the reducer
  */ 
 export function searchVideo(term) {
-      let request = axios.get("https://www.googleapis.com/youtube/v3/search?q="+term+"&part=snippet&key="+youtubeApiSearchKey/"");
+      let request = axios.get(`https://www.googleapis.com/youtube/v3/search?q=${term}&part=snippet&key=${youtubeApiSearchKey}`);
       return {
             type : 'VIDEO_SEARCHED',
             payload : request
@@ -33,14 +30,13 @@ export function searchVideo(term) {
 }
   
 export function searchTrendingVideo(term) {
-    let request = axios.get("https://www.googleapis.com/youtube/v3/search?q="+term+"&part=snippet&key="+youtubeApiSearchKey/"");
+    let request = axios.get(`https://www.googleapis.com/youtube/v3/search?q=${term}&part=snippet&key=${youtubeApiSearchKey}`);
     return {
           type : 'TRENDING_VIDEO_SEARCH',
           payload : request
         };
 }
 export function loadindState(status) {
-    console.log('change loading status'+status);
     return {
           type : 'CHNAGE_LOADING_STATE',
           payload : status

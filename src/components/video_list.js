@@ -1,5 +1,5 @@
 import React from 'react';
-import VideoListItem from './video_list_item';
+import VideoListItem from '../containers/video_list_item.js';
 import { connect } from 'react-redux';
 //import Input from '';
 
@@ -22,17 +22,3 @@ export default class VideoList  extends React.Component {
     )
   }
 }
-
-// function mapStateToProps(state) {
-//     // Whatever is returned will show up as props
-//     // inside of VideoList
-//     return {
-//       video: state.videos
-//     };
-//   }
-  
-  
-//   // Promote VideoList  from a component to a container - it needs to know
-//   // about this new dispatch method, selectBook. Make it available
-//   // as a prop.
-//   export default connect(mapStateToProps)(VideoList);
